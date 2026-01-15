@@ -158,11 +158,12 @@ button {
 /**
   Приводим к единому цвету svg-элементы
   (за исключением тех, у которых уже указан
-  атрибут fill со значением 'none' или начинается с 'url')
+  атрибут fill со значением 'none', 'url' или цвет в HEX)
  */
 :where([fill]:not(
   [fill="none"],
-  [fill^="url"]
+  [fill^="url"],
+  [fill="#"]
 )) {
   fill: currentColor;
 }
@@ -170,11 +171,12 @@ button {
 /**
   Приводим к единому цвету svg-элементы
   (за исключением тех, у которых уже указан
-  атрибут stroke со значением 'none')
+  атрибут stroke со значением 'none', 'url' или цвет в HEX)
  */
 :where([stroke]:not(
   [stroke="none"],
-  [stroke^="url"]
+  [stroke^="url"],
+  [fill="#"]
 )) {
   stroke: currentColor;
 }
